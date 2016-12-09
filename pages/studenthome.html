@@ -1,0 +1,99 @@
+<div data-page="studenthome" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="center" id="student_name"></div>
+      <div class="right"><a href="#" class="link icon-only open-popover" data-popover=".popover-studentsidemenu"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  <div class="page-content">
+	
+	<div class="list-block">
+      <ul>
+	  
+		<li>
+          <div class="item-content">
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Enter Code from Subject:</div>
+              <div class="item-input">
+                <input type="text" placeholder="" id="codeinput"/>
+              </div>
+            </div>
+          </div>
+        </li>
+		
+		<li>
+          <div class="item-content">
+            <div class="item-inner"> 
+				<div class="content-block">
+				<p class="buttons-row">
+					
+					<a href="#" class="button button-fill color-green" onclick="preenrollbycode('<center><strong>Successfully Enrolled</strong></center>');" style="margin-top: -10%;">Enroll Subject</a>
+					
+					<div id="hidden_inputs"></div>
+					<a href="#" onclick="enrollbycode();" id="hiddenbtn" style="display:none;">success</a>
+					<!--<input type="text" id="teacher_id" value="'+datas.tid+'"><input type="text" id="subject_id" value="'+datas.subjid+'"><input type="text" id="school_year" value="'+datas.schoolyear+'">-->
+				</p>
+				
+				<!--<p class="buttons-row">
+					<a href="#" class="button button-fill color-green" onclick="myApp.alert('<center><strong>Invalid Subject Code</strong></center>');">Enroll Subject (Wrong Code)</a>
+				</p>-->
+				</div>
+            </div>
+          </div>
+        </li>
+	  
+      <ul>
+	</div>
+	
+	<center><div class="content-block-title" style="margin-top: -13%;"><strong>OR</strong></div></center>
+	<br>
+	
+	<center><div class="content-block-title"><strong>View your grades</strong></div></center>
+    <div class="list-block">
+      <ul>
+        <li><a href="#" class="item-link smart-select">
+            <select name="nameschoolyear" id="syinput">
+              <option value="1617">S.Y. 2016-2017</option>
+              <option value="1718">S.Y. 2017-2018</option>
+              <option value="1819">S.Y. 2018-2019</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Select School Year:</div>
+              </div>
+            </div></a></li>
+			
+		<!--<li><a href="#" class="item-link smart-select">
+            <select name="namesemester">
+              <option value="1">1st Semester</option>
+              <option value="2">2nd Semester</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Select Semester:</div>
+              </div>
+            </div></a></li>
+		
+		<li><a href="#" class="item-link smart-select">
+            <select name="nameterm">
+              <option value="midterm">Midterm</option>
+              <option value="final">Final</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Select Term:</div>
+              </div>
+            </div></a></li>-->
+
+      </ul>
+    </div>
+	
+	<div class="content-block" style="margin-top: -3%;">
+    <p class="buttons-row">
+		<a href="pages/studentsearch.html" onclick="showgrades();" class="button button-fill color-green">Proceed</a>
+	</p>
+	</div>
+	<input type="hidden" id="student_id"></input>
+	
+  </div>
+</div>

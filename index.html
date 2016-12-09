@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>DMMMSU-SLUC</title>
+    <link rel="stylesheet" href="build/css/framework7.material.css">
+    <link rel="stylesheet" href="build/css/framework7.material.colors.css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+    <link rel="icon" href="img/logo.png">
+  </head>
+  <body onload="check_session();" class="theme-green">
+	
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div data-page="panel-left" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Menu</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <!--<div class="content-block-title">Framework7 Kitchen Sink</div>-->
+              <div class="list-block">
+                <ul>
+                  
+				  
+				  <li>
+				  <a href="pages/parentsetting.html" class="item-link close-panel">
+                    <div class="item-content">
+                        <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
+                        <div class="item-inner">
+                          <div class="item-title">Parent Settings</div>
+                        </div>
+                    </div>
+				  </a>
+				  </li>
+				  
+				  <li>
+				  <a href="pages/studentsetting.html" class="item-link close-panel">
+                    <div class="item-content">
+                        <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
+                        <div class="item-inner">
+                          <div class="item-title">Student Settings</div>
+                        </div>
+                    </div>
+				  </a>
+				  </li>
+				  
+				  <li>
+				  <a href="pages/teachersetting.html" class="item-link close-panel">
+                    <div class="item-content">
+                        <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
+                        <div class="item-inner">
+                          <div class="item-title">Teacher Settings</div>
+                        </div>
+                    </div>
+				  </a>
+				  </li>
+				  
+				  
+				  <li>
+				  <a href="index.html" class="item-link close-panel" onclick="localStorage.clear();">
+                    <div class="item-content">
+                        <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
+                        <div class="item-inner">
+                          <div class="item-title">Logout</div>
+                        </div>
+                    </div>
+				  </a>
+				  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed">
+          <div data-page="index" class="page">
+            <div class="page-content">
+				
+				
+			<div class="login-screen-title"><img src="img/logo.png" width="200" height="200"><h4 class="color-green" style="margin-top: -1%;">DMMMSU-SLUC</h4><h6 class="color-bluegray" style="margin-top: -15%;">GRADE INQUIRY</h6></div>
+			  
+			  <div class="content-block">
+			  <p class="buttons-row">
+				<a href="#" class="button color-black" disabled><strong>Teacher</strong></a>
+			  </p>
+			  
+			  <p class="buttons-row">
+				<a href="pages/loginteacher.html" class="button button-raised button-fill color-green">Login</a>
+			  </p>
+			  
+			  <p class="buttons-row">
+				<a href="pages/signupteacher.html" class="button button-raised color-green">Sign-up</a>
+			  </p>
+			  </div>
+			  
+			  
+			  <!--
+			  
+			  <div class="login-screen-title"><br><img src="img/logo.png" width="90" height="90"><h4 class="color-green" style="margin-top: -1%;">ARE YOU A?</h4></div>
+			  
+			  <div class="content-block-title">Welcome To Framework7</div>
+              <div class="content-block">
+				<a href="loginparent.html" class="button button-raised button-fill color-green">
+					Parent
+				</a>
+			  </div>
+              
+			  <div class="content-block">
+				<a href="loginteacher.html" class="button button-raised button-fill color-green">
+					Teacher
+				</a>
+			  </div>
+			  
+			  <div class="content-block">
+				<a href="loginchairman.html" class="button button-raised button-fill color-green">
+					Chairman
+				</a>
+			  </div>-->
+			  
+			  
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+    <div class="login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Framework7</div>
+            <form>
+              <div class="list-block inputs-list">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Username</div>
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="Your username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block"><a href="#" class="button button-big">Sign In</a></div>
+              <div class="content-block">
+                <div class="list-block-label">Some text about login information.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<!--<div class="popover popover-contacts">
+      <div class="popover-inner">
+        <div class="list-block media-list">
+          <ul>
+            <li>
+			<a href="pages/addexam.html" class="item-content item-link close-popover">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Add Exam</div>
+                </div>
+              </div>
+			</a>
+            </li>
+            <li>
+			<a href="pages/addquiz.html" class="item-content item-link close-popover">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Add Quiz</div>
+                </div>
+              </div>
+			</a>
+            </li>
+			<li>
+			<a href="pages/addassignment.html" class="item-content item-link close-popover">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Add Assignment</div>
+                </div>
+              </div>
+			</a>
+            </li>
+			<li>
+			<a href="pages/addrecitation.html" class="item-content item-link close-popover">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Add Recitation</div>
+                </div>
+              </div>
+			</a>
+            </li>
+            <li>
+			<a href="pages/addstudent.html" class="item-content item-link close-popover">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">Add Student</div>
+                </div>
+              </div>
+			</a>
+            </li>
+            <li><div class="item-content bg-green color-white">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Choose</div>
+                  </div>
+                </div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>-->
+	
+	<div class="popover popover-menu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+            <li><a href="pages/recordview.html" class="list-button item-link color-blue close-popover">View Record</a></li>
+            <li><a href="pages/addrecord.html" class="list-button item-link color-green close-popover">Edit Record</a></li>
+            <li><a href="#" onclick="myApp.prompt('Are you sure you want to delete this?');"class="list-button item-link color-red close-popover">Delete Record</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-teachersidemenu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+			<li><a href="pages/helpteacher.html" class="list-button item-link close-popover">Help</a></li>
+            <li><a href="pages/teachersetting.html" onclick="teachersetting();" class="list-button item-link close-popover">Settings</a></li>
+			<li><a href="pages/deletestudent.html" onclick="passiddeletestudents();" class="list-button item-link close-popover">All Students</a></li>
+            <li><a href="index.html" class="list-button item-link color-red close-popover" onclick="localStorage.clear();">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-studentsidemenu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+            <li><a href="pages/helpstudent.html" class="list-button item-link close-popover">Help</a></li>
+			<li><a href="pages/studentsetting.html" onclick="studentsetting();" class="list-button item-link close-popover">Settings</a></li>
+            <li><a href="index.html" class="list-button item-link color-red close-popover" onclick="localStorage.clear();">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-parentsidemenu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+			<li><a href="pages/helpparent.html" class="list-button item-link close-popover">Help</a></li>
+            <li><a href="pages/parentsetting.html" onclick="parentsetting();" class="list-button item-link close-popover">Settings</a></li>
+            <li><a href="index.html" class="list-button item-link color-red close-popover" onclick="localStorage.clear();">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-music">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+            <li><a href="#" class="list-button item-link close-popover">Remove</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+    <script type="text/javascript" src="build/js/framework7.js"></script>
+    <script type="text/javascript" src="js/kitchen-sink.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+
+<div data-page="createsubject" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="#" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Create Subject</div>
+	  <div class="right"><a href="#" class="link icon-only open-popover" data-popover=".popover-teachersidemenu"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  <div class="page-content">
+    
+    <!--<div class="content-block-title">With Floating Labels</div>-->
+    <div class="list-block inputs-list">
+      <ul>
+        
+		
+		
+		
+		<li>
+          <div class="item-content">
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Subject Title:</div>
+              <div class="item-input">
+                <input type="text" placeholder="" id="subjecttitle"/>
+              </div>
+            </div>
+          </div>
+        </li>
+		
+		<li><a href="#" class="item-link smart-select">
+            <select name="fruits" id="subjectsy">
+              <option value="1617" selected="selected">S.Y. 2016-2017</option>
+              <option value="1718">S.Y. 2017-2018</option>
+              <option value="1819">S.Y. 2018-2019</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">School Year:</div>
+              </div>
+            </div></a></li>
+		
+		<!--<li><a href="#" class="item-link smart-select">
+            <select name="fruits" id="subjecttg">
+              <option value="50-50" selected="selected">50-50</option>
+              <option value="60-40">60-40</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Transmutation Grade:</div>
+              </div>
+            </div></a></li>-->
+		
+		<li><a href="#" class="item-link smart-select">
+            <select name="fruits" id="subjectdepartment">
+              <option value="CAS" selected="selected">College of Arts and Sciences</option>
+              <option value="CCS">College of Computer Sciences</option>
+              <option value="COE">College of Education</option>
+              <option value="IA">Institute of Agricultutre</option>
+              <option value="ICHAMS">Institute of Community Health and Allied Medical Sciences</option>
+              <option value="IF">Institute of Fisheries</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Department:</div>
+              </div>
+            </div></a></li>
+		
+		<li><a href="#" class="item-link smart-select">
+            <select name="fruits" id="subjectcourse">
+              <option value="BAT" selected="selected">Bachelor of Agricultural Technology</option>
+              <option value="BAE">B.A. in English</option>
+              <option value="BAF">B.A. in Filipino</option>
+              <option value="BSA">B.S. Agriculture</option>
+              <option value="BSB">B.S. Biology</option>
+              <option value="BSCSL">B.S. Computer Science (Ladderized)</option>
+              <option value="BSCSS">B.S. Computer Science (Straight)</option>
+              <option value="BSEE">B.S. Elementary Education</option>
+              <option value="BSM">B.S. Mathematics</option>
+              <option value="BSMW">B.S. Midwifery</option>
+              <option value="BSN">B.S. Nursing</option>
+              <option value="BSP">B.S. Psychology</option>
+              <option value="BSSE">B.S. Secondary Education</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Course:</div>
+              </div>
+            </div></a></li>
+		
+		<!--<li><a href="#" class="item-link smart-select">
+            <select name="fruits">
+              <option value="BAT" selected="selected">Bachelor of Agricultural Technology</option>
+              <option value="BAE">Bachelor of Arts in English</option>
+              <option value="BAF">Bachelor of Arts in Filipino</option>
+              <option value="BSA">Bachelor of Science in Agriculture</option>
+              <option value="BSB">Bachelor of Science in Biology</option>
+              <option value="BSCSL">Bachelor of Science in Computer Science (Ladderized)</option>
+              <option value="BSCSS">Bachelor of Science in Computer Science (Straight)</option>
+              <option value="BSEE">Bachelor of Science in Elementary Education</option>
+              <option value="BSM">Bachelor of Science in Mathematics</option>
+              <option value="BSMW">Bachelor of Science in Midwifery</option>
+              <option value="BSN">Bachelor of Science in Nursing</option>
+              <option value="BSP">Bachelor of Science in Psychology</option>
+              <option value="BSSE">Bachelor of Science in Secondary Education</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Course:</div>
+              </div>
+            </div></a></li>-->
+		
+		<li>
+          <div class="item-content">
+            <div class="item-inner"> 
+              <div class="item-title floating-label">Year and Section:</div>
+              <div class="item-input">
+                <input type="text" placeholder="" id="subjectys"/>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+	
+	<div class="content-block">
+		<!--<a href="#" class="button button-raised button-fill color-pink ks-generate-page" onclick="loginstudent();";>-->
+		<a href="pages/teacherhome.html" id="createsubjectsuccess" style="display:none;">success</a>
+		<a onclick="createsubject();" class="button button-raised button-fill color-green" >
+			Create Subject
+		</a>
+		<input type="hidden" id="teacher_id" value="">
+	</div>
+	
+  </div>
+</div>

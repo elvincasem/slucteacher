@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.slucstudent.sample"
+        versionCode = "1" 
+        version     = "1.0.0" >
+        <name>Grade Inquiry SLUC - Teacher</name>
+        <description>
+            Grade Inquiry
+        </description>
+        <author email="gradeinquiry@gmail.com" href="http://gradeinquiry.com">
+            Grade Inquiry Team
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+        <icon src="icon.png" gap:platform="android" gap:qualifier="ldpi" />
+        <icon src="icon.png" gap:platform="android" gap:qualifier="mdpi" />
+        <icon src="icon.png" gap:platform="android" gap:qualifier="hdpi" />
+        <icon src="icon.png" gap:platform="android" gap:qualifier="xhdpi" />
+        <icon src="icon.png" gap:platform="android" gap:qualifier="xxhdpi" />
+        <icon src="icon.png" gap:platform="android" gap:qualifier="fr-xxhdpi" />
+		<preference name="debuggable" value="false"/>
+		<plugin name="cordova-plugin-whitelist" spec="1.3.0" source="npm" />
+		<plugin name="cordova-plugin-inappbrowser" spec="1.5.0" source="npm" />
+		<plugin name="cordova-plugin-splashscreen" spec="4.0.0" source="npm" />
+		<plugin name="cordova-plugin-device" spec="1.1.3" source="npm" />
+        <allow-navigation href="*" />
+    </widget>
+

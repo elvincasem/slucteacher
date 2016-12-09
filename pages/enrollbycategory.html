@@ -1,0 +1,116 @@
+<div data-page="enrollbycategory" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="#" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Choose and Enroll</div>
+      <div class="right"><a href="#" class="link icon-only open-popover" data-popover=".popover-teachersidemenu"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  <div class="page-content">
+	
+	<div class="content-block-title">Choose the department, course, year and section<br>of the students you wish to enroll in this subject.</div>
+	
+	<div class="list-block">
+      <ul>
+		<li><a href="#" class="item-link smart-select">
+            <select name="department" id="studentdepartment">
+              <option value="CE" selected="selected">CE</option>
+              <option value="CS">CS</option>
+              <option value="CCS">CCS</option>
+              <option value="ICHAMS">ICHAMS</option>
+              <option value="IA">IA</option>
+              <option value="ADMIN">ADMIN</option>
+              <option value="XE">XE</option>
+              <option value="GS">GS</option>
+              <option value="AL">AL</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Department:</div>
+              </div>
+            </div></a></li>
+			
+		<li><a href="#" class="item-link smart-select">
+            <select name="course" id="studentcourse">
+              <option value="BAT" selected="selected">Bachelor of Agricultural Technology</option>
+              <option value="BAE">B.A. in English</option>
+              <option value="BAF">B.A. in Filipino</option>
+              <option value="BSA">B.S. Agriculture</option>
+              <option value="BSB">B.S. Biology</option>
+              <option value="BSCSL">B.S. Computer Science (Ladderized)</option>
+              <option value="BSCSS">B.S. Computer Science (Straight)</option>
+              <option value="BSEE">B.S. Elementary Education</option>
+              <option value="BSM">B.S. Mathematics</option>
+              <option value="BSMW">B.S. Midwifery</option>
+              <option value="BSN">B.S. Nursing</option>
+              <option value="BSP">B.S. Psychology</option>
+              <option value="BSSE">B.S. Secondary Education</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Course:</div>
+              </div>
+            </div></a></li>
+			
+		<li><a href="#" class="item-link smart-select">
+            <select name="y" id="studentyear">
+              <option value="I" selected="selected">I</option>
+              <option value="II">II</option>
+              <option value="III">III</option>
+              <option value="IV">IV</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Year:</div>
+              </div>
+            </div></a></li>
+			
+		<li><a href="#" class="item-link smart-select">
+            <select name="s" id="studentsection">
+              <option value="A" selected="selected">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+              <option value="H">H</option>
+              <option value="I">I</option>
+              <option value="J">J</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+            </select>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Section:</div>
+              </div>
+            </div></a></li>
+		
+		</ul>
+	</div>
+	
+	<div class="content-block">
+    <p class="buttons-row">
+		<!--<div id="enroll_btn"></div>-->
+		<!--<a href="#" class="back" id="updatesuccess" style="display:none;">success</a>-->
+		<a href="#" onclick="addcategory();" class="button button-fill color-green">Enroll Students under Categories</a>
+	</p>
+	<p class="buttons-row">
+		<input type="hidden" id="input_subjid">
+		<input type="hidden" id="input_sy">
+	</p>
+	</div>
+	
+  </div>
+</div>
