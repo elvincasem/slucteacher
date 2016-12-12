@@ -141,7 +141,7 @@ function studentregister(){
 }
 
 
-function teacherregister(){
+/* function teacherregister(){
 
 	 var tname = document.getElementById("teachername").value;
 	 var id = document.getElementById("teacherid").value;
@@ -162,7 +162,7 @@ function teacherregister(){
 		
 	},JSON);
 	}
-}
+} */
 
 
 function parentregister(){
@@ -347,7 +347,6 @@ function createsubject(){
 	
 	 var stitle = document.getElementById("subjecttitle").value;
 	 var ssy = document.getElementById("subjectsy").value;
-	 var stg = document.getElementById("subjecttg").value;
 	 var sdept = document.getElementById("subjectdepartment").value;
 	 var scrse = document.getElementById("subjectcourse").value;
 	 var sys = document.getElementById("subjectys").value;
@@ -359,7 +358,7 @@ function createsubject(){
 	if(stitle == "" || sys == ""){
 	myApp.alert('<center><strong>Please fill all inputs</strong></center>');
 	}else{
-	$$.post(global_url, {action: 'createsubject',subjecttitle: stitle, subjectsy: ssy, subjecttg: stg, subjectdept: sdept, subjectcourse: scrse, subjectys: sys, subjectcode: scode, teacherid: teachid}, function (data,status) {
+	$$.post(global_url, {action: 'createsubject',subjecttitle: stitle, subjectsy: ssy, subjectdept: sdept, subjectcourse: scrse, subjectys: sys, subjectcode: scode, teacherid: teachid}, function (data,status) {
 		
 		console.log(data);
 		myApp.alert('<center><strong>Successfully Created Subject</strong><br>Subject Code: '+ gencode +'</center>');
@@ -762,7 +761,7 @@ $$(document).on('pageAfterAnimation','.page[data-page="deletestudent"]',function
 		console.log(datas);
 		
 		for(var i = 0; i<datas.length; i++){
-			$$('#displayStud').append('<li><a href="#" onclick="deletestudent('+datas[i].studid+');" class="item-link item-content item-title item-inner">('+datas[i].year+''+datas[i].section+') '+datas[i].name+'</a></li>');
+			$$('#displayStud').append('<li><a href="#" onclick="deletestudent('+datas[i].studid+');" class="item-link item-content item-title item-inner">('+datas[i].studentid+') '+datas[i].name+'</a></li>');
 		}
 	},JSON);
 })
@@ -1067,7 +1066,116 @@ function parentsetting(){
 
 
 
+////////////////////////////////////////////////////NEW CODE//////////////////////////////////////////////////
+////////////////////////////////////////////////////NEW CODE//////////////////////////////////////////////////
+////////////////////////////////////////////////////NEW CODE//////////////////////////////////////////////////
+////////////////////////////////////////////////////NEW CODE//////////////////////////////////////////////////
+////////////////////////////////////////////////////NEW CODE//////////////////////////////////////////////////
 
+
+function teacherpreregister(){
+
+	 var id = document.getElementById("registeridnumber").value;
+	
+	$$.post(global_url, {action: 'registerfindtid', idnumber: id}, function (data) {
+		
+		document.getElementById('register_form').innerHTML = "";
+		console.log(data);
+		
+		if (data == 1){
+		$$('#register_form').append('<div class="list-block input-list">'+
+									  '<ul>'+
+									  '<li><div class="item-content item-inner item-title item-divider"><center>Registeration Form</center></div></li>'+
+										'<li>'+
+										  '<div class="item-content">'+
+											'<div class="item-inner">'+
+											  '<div class="item-title floating-label">Full Name:</div>'+
+											  '<div class="item-input">'+
+												'<input type="text" placeholder="" id="teachername"/>'+
+											  '</div>'+
+											'</div>'+
+										  '</div>'+
+										'</li>'+
+										'<li>'+
+										  '<div class="item-content">'+
+											'<div class="item-inner">'+
+											  '<div class="item-title floating-label">Contact:</div>'+
+											  '<div class="item-input">'+
+												'<input type="text" placeholder="" id="teachercontactnumber"/>'+
+											  '</div>'+
+											'</div>'+
+										  '</div>'+
+										'</li>'+
+										'<li>'+
+										  '<div class="item-content">'+
+											'<div class="item-inner">'+
+											  '<div class="item-title floating-label">Username:</div>'+
+											  '<div class="item-input">'+
+												'<input type="text" placeholder="" id="teacherusername"/>'+
+											  '</div>'+
+											'</div>'+
+										  '</div>'+
+										'</li>'+
+										'<li>'+
+										  '<div class="item-content">'+
+											'<div class="item-inner">'+
+											  '<div class="item-title floating-label">Password:</div>'+
+											  '<div class="item-input">'+
+												'<input type="password" placeholder="" id="teacherpassword"/>'+
+											  '</div>'+
+											'</div>'+
+										  '</div>'+
+										'</li>'+
+									  '</ul>'+
+									'</div>'+
+		'<div class="content-block"><p class="buttons-row">'+
+			'<a href="#" class="button button-raised back link">Discard</a>'+
+			'<a href="index.html" id="registerteachersuccess" style="display:none;">success</a>'+
+			'<a onclick="teacherregister();" class="button button-raised button-fill color-green">Register</a>'+
+		'</p></div>');
+		}else if (data == 0){
+		myApp.alert('<center class="color-deeporange">Sorry you are not yet registered in the system. Please consult <br>the School Registrar.<center>');
+		}
+		
+	},JSON);
+}
+
+function teacherregister(){
+
+	 var tname = document.getElementById("teachername").value;
+	 var id = document.getElementById("registeridnumber").value;
+	 var contact = document.getElementById("teachercontactnumber").value;
+	 var uname = document.getElementById("teacherusername").value;
+	 var pwd = document.getElementById("teacherpassword").value;
+	
+	if(tname == "" || id == "" || contact == "" || uname == "" || pwd == ""){
+	myApp.alert('<center><strong>Please fill all inputs</strong></center>');
+	}else{
+	$$.post(global_url, {action: 'registerteacher',teachername: tname, teacherid: id, contactnumber: contact, username: uname, password: pwd}, function (data,status) {
+		
+		console.log(data);
+		
+		if(data == 1){
+			myApp.alert('<center><strong>Registration Successful!</strong><br>Please login with your <strong>Username</strong> and <strong>password</strong>.</center>');
+			var register = document.getElementById("registerteachersuccess");
+			register.click();
+		}else{
+			myApp.alert('<center><strong>Sorry</strong><br>This account already exists in<br>the system. Please report this <br>issue to the System Admin</center>');
+		}
+		
+	},JSON);
+	}
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
